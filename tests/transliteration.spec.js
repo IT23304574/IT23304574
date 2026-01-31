@@ -7,7 +7,7 @@ test.describe('IT3040 Assignment 1: Singlish to Sinhala Transliteration', () => 
         await page.goto('/', { waitUntil: 'load', timeout: 60000 });
     });
 
-    /** * POSITIVE FUNCTIONAL TESTS (24 Scenarios).
+    /** * POSITIVE FUNCTIONAL TESTS (24 Scenarios)
      */
     const positiveScenarios = [
         { id: '0001', input: 'adha panthi yanavadha?', expected: 'අද පන්ති යනවද?' },
@@ -33,17 +33,7 @@ test.describe('IT3040 Assignment 1: Singlish to Sinhala Transliteration', () => 
         { id: '0021', input: 'Mama heta gedhara enavaa', expected: 'මම හෙට ගෙදර එනවා' },
         { id: '0022', input: 'Mata okkoma karanna baee', expected: 'මට ඔක්කොම කරන්න බෑ' },
         { id: '0023', input: 'Malli gedhara yanna hadhanne', expected: 'මල්ලි ගෙදර යන්න හදන්නෙ' },
-        { id: '0024', input: 'oogollo heta trip ekak yanavadha?', expected: 'ඕගොල්ලො හෙට trip එකක් යනවද?' },
-        { id: '0025', input: 'Karunakarala yanawadha', expected: 'කරුනාකරල යනවද' },
-        { id: '0026', input: 'Email', expected: 'ඊමේල්' },
-        { id: '0027', input: 'malli school yannee bus ekee.', expected: 'මල්ලි school යන්නෙ bus එකේ.' },
-        { id: '0028', input: 'URL', expected: 'යූආර් එල්' },
-        { id: '0029', input: 'Mama kamareta yanawa', expected: 'මම කාමරේට යනව' },
-        { id: '0030', input: 'Mama iye ude campus yagin gedara enakota 6 wage wela thibune ee time ekata thama oha hariye wahanayak happila thibbe. Mata mathaka na kauruhari ee wahane athule hitiyada kiyala mokadha mata time ekak thibbe na eka check keranna eka nisa mata hariyatama kiyanna amarui sir . namuth mata mona hari mathak unoth man aniwaryen inform kerannan police station ekata .mata sir ge contact number eka denna puluwandha. habai sir samahara wita ara eha paththe podi camera ekak thiyei gate eke eka check keranan hoduwawak hoyaganna puluwan wei samahara wita  ', expected: 'මම ඊයෙ උදේ campus ගිහින් ගෙදර එනකොට 6 වගේ වෙලා තිබුනෙ ඒ time එකට තම ඔහ හරියෙ වාහනයක් හැප්පිල තිබ්බෙ. මට මතක නෑ කෞරුහරි ඒ වහනේ ඇතුලෙ හිටියද කියල මොකද මට time එකක් තිබ්බෙ නෑ ඒක check කරන්න එක නිස මට හරියටම කියන්න අමාරුයි sir . නමුත් මට මොන හරි මතක් උනොත් man අනිවාර්යෙන් inform කරන්නන් police station එකට .මට sir ගෙ contact number එක දෙන්න පුලුවන්ද. හැබැයි sir සමහර විට අරා එහ පැත්තෙ පොඩි camera එකක් තියේ gate එකේ ඒක check කරානන් හොඩුවාවක් හොයාගන්න පුලුවන් වෙයි සමහර විට ' },
-        { id: '0031', input: 'Mata rupiyak wissak denna puluwanda?', expected: 'මට රුපියල් විස්සක් දෙන්න පුලුවන්ද?' },
-        { id: '0032', input: 'Dan nan mata athi', expected: 'දැන්නන් මට ඇති' },
-        { id: '0033', input: 'Meka kawadda iwara wenne', expected: 'මේක කවද්ද ඉවර වෙන්නෙ' },
-        { id: '0034', input: 'Assignment eka kerada?', expected: 'Assignment එක කරාද?' }
+        { id: '0024', input: 'oogollo heta trip ekak yanavadha?', expected: 'ඕගොල්ලො හෙට trip එකක් යනවද?' }
     ];
 
     for (const data of positiveScenarios) {
@@ -67,23 +57,33 @@ test.describe('IT3040 Assignment 1: Singlish to Sinhala Transliteration', () => 
     /** * NEGATIVE FUNCTIONAL TESTS (10 Scenarios)
      */
     const negativeScenarios = [
-        { id: '0040', input: 'mma geDhra yanvaa.', desc: 'Vowel omission' },
-        { id: '0041', input: 'mama @#$% yanavaa!', desc: 'Excessive symbols' }
+        { id: '0025', input: 'Karunakarala yanawadha', expected: 'කරුනාකරල යනවද' },
+        { id: '0026', input: 'Email', expected: 'ඊමේල්' },
+        { id: '0027', input: 'malli school yannee bus ekee.', expected: 'මල්ලි school යන්නෙ bus එකේ.' },
+        { id: '0028', input: 'URL', expected: 'යූආර් එල්' },
+        { id: '0029', input: 'Mama kamareta yanawa', expected: 'මම කාමරේට යනව' },
+        { id: '0030', input: 'Mama iye ude campus yagin gedara enakota 6 wage wela thibune ee time ekata thama oha hariye wahanayak happila thibbe. Mata mathaka na kauruhari ee wahane athule hitiyada kiyala mokadha mata time ekak thibbe na eka check keranna eka nisa mata hariyatama kiyanna amarui sir . namuth mata mona hari mathak unoth man aniwaryen inform kerannan police station ekata .mata sir ge contact number eka denna puluwandha. habai sir samahara wita ara eha paththe podi camera ekak thiyei gate eke eka check keranan hoduwawak hoyaganna puluwan wei samahara wita  ', expected: 'මම ඊයෙ උදේ campus ගිහින් ගෙදර එනකොට 6 වගේ වෙලා තිබුනෙ ඒ time එකට තම ඔහ හරියෙ වාහනයක් හැප්පිල තිබ්බෙ. මට මතක නෑ කෞරුහරි ඒ වහනේ ඇතුලෙ හිටියද කියල මොකද මට time එකක් තිබ්බෙ නෑ ඒක check කරන්න එක නිස මට හරියටම කියන්න අමාරුයි sir . නමුත් මට මොන හරි මතක් උනොත් man අනිවාර්යෙන් inform කරන්නන් police station එකට .මට sir ගෙ contact number එක දෙන්න පුලුවන්ද. හැබැයි sir සමහර විට අරා එහ පැත්තෙ පොඩි camera එකක් තියේ gate එකේ ඒක check කරානන් හොඩුවාවක් හොයාගන්න පුලුවන් වෙයි සමහර විට ' },
+        { id: '0031', input: 'Mata rupiyak wissak denna puluwanda?', expected: 'මට රුපියල් විස්සක් දෙන්න පුලුවන්ද?' },
+        { id: '0032', input: 'Dan nan mata athi', expected: 'දැන්නන් මට ඇති' },
+        { id: '0033', input: 'Meka kawadda iwara wenne', expected: 'මේක කවද්ද ඉවර වෙන්නෙ' },
+        { id: '0034', input: 'Assignment eka kerada?', expected: 'Assignment එක කරාද?' }
     ];
 
     for (const data of negativeScenarios) {
-        test(`Neg_Fun_${data.id}: ${data.desc}`, async ({ page }) => {
+        test(`Neg_Fun_${data.id}: ${data.input}`, async ({ page }) => {
+            // Locate the input field by its placeholder and fill it
             const inputField = page.getByPlaceholder('Input Your Singlish Text Here.');
             await inputField.fill(data.input);
-            // Trigger input/change/blur events
+            // Trigger input event by typing to ensure the transliteration logic runs
             await inputField.dispatchEvent('input');
+            // Also trigger change event
             await inputField.dispatchEvent('change');
+            // Trigger blur as well
             await inputField.blur();
             
-            // Locate the output field
+            // Locate the output field (the element following "Sinhala" label) and wait for it to have text
             const outputLocator = page.locator('text=Sinhala').locator('xpath=following-sibling::*').first();
-            // Check that it doesn't match a perfect sentence
-            await expect(outputLocator).not.toHaveText('මම ගෙදර යනවා', { timeout: 15000 }); 
+            await expect(outputLocator).toHaveText(data.expected, { timeout: 15000 });
         });
     }
 
